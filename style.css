@@ -1,0 +1,217 @@
+
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    height: 110vh;
+    width: 1200px;
+    padding: 50px;
+    transform: scale(0.65);
+    margin-left: 150px;
+    margin-top: -200px;
+  }
+  
+  /*
+  By setting the container holding all of the panels to dislay: flex, flex-wrap can be used to arrange the panels to move to the next line in the container. 
+  Justify-content centers each panel in the same line. Align-items makes the panels align to the top of the container. Setting the height to 110 viewport height
+  unit makes the container take up the height of the viewport with some space at the top. Width: 1200px was used to center the container. Padding creates space
+  between the edge of the container and all the panels inside it. Transform: scale makes the container smaller while margin-left moves the container right and
+  margin-top moves the container up by using a negative value.
+  */
+
+
+  .box {
+    border: 6px solid black;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin: 10px;
+    background-color: rgba(247, 246, 244, 0.313);
+  }
+
+  /*
+  The border, radius and sizing elements were all adjusted to have thicker black borders with rounding to appear similar to the panels in the Akira chapter. 
+  The box-sizing sets the size of the panels to include the padding and border together, while margin sets space between each panel and background-color sets the
+  colour within the panels to a transparent white.
+  */
+
+  
+  .panel1 {
+    height: 650px;
+    width: 357px;
+    margin-right: 490px;
+    margin-bottom: 0px;
+    position:absolute;
+  }
+
+  /*
+  The height and width of the following panels were adjusted to the same shapes as the Akira panel each was referencing. By setting the position to absolute, the
+  position could be moved in each direction through margin-right and margin-bottom/top without effecting the other elements in the container. 
+  */
+
+  .panel2 {
+    height: 390px;
+    width: 652px;
+    margin-right: -550px;
+    margin-bottom: 0px;
+    position:absolute;
+  }
+
+  .panel3 {
+    height: 225px;
+    width: 652px;
+    margin-right: -550px;
+    margin-top: 435px;
+    position:absolute;
+  }
+
+  .panel4 {
+    height: 520px;
+    width: 215px;
+    margin-right: 630px;
+    margin-top: 718px;
+    position:absolute;
+  }
+
+    .panel5 {
+    height: 520px;
+    width: 630px;
+    margin-right: -250px;
+    margin-top: 718px;
+    position:absolute;
+  }
+
+  .panel6 {
+    height: 520px;
+    width: 145px;
+    margin-right: -1060px;
+    margin-top: 718px;
+    position:absolute;
+  }
+
+  .panel7 {
+    height: 430px;
+    width: 1050px;
+    margin-right: -180px;
+    margin-top: 1295px;
+    position:absolute;
+  }
+
+
+.foreground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 5760px;
+    height: 1080px;
+    z-index: 1;
+    background-image: url(akiramiki12.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+  
+    animation: panleft 90s linear infinite;
+  }
+  
+  @keyframes panleft {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  /*
+  Position: fixed is used to prevent the foreground drawing from moving when the user scrolls the website. Top: 0 and left:0 make sure that the image sits flush
+  against the top and left of the viewport. Width and height are used to change the size of the drawing. A z-index of 1 is used to place it in-front of the panels.
+  Background-imageL url links the drawing I intended to use for the foreground. Meanwhile, background-repeat, size and position sets a single centered image to
+  cover the entire area. Animation: panleft uses linear timing to make the image move left over 90 seconds and then repeat. This number was chosen for the 
+  desired speed of the movement. @keyframes is used to create a keyframe animation. The animation begins (0%) at 0% of the drawing on the X axis, meaning it begins 
+  at the very left of it. It then follows the movement left, ending the animation (100%) when the picture reaches 100% of the image along the x axis, or the very
+  right of it. 
+  */
+
+
+
+  
+  .background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 5760px;
+    height: 1080px;
+    z-index: -2;
+    background-image: url(background\ akira2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+  
+    animation: panright 300s linear infinite;
+    transform: translateX(0%);
+  }
+  
+  @keyframes panright {
+    0% {
+      transform: translateX(-70%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  
+  /*
+  The coding here is the same as above, however it has a z-index of -2. This allows it to go behind the foreground and the panels. It also has a panright animaion
+  of 300s, setting it to move more slowly. Finally the keyframe at 0% for transform: translateX is set to -70% so that the drawing does not begin cut off. Again,
+  the keyframe at 100% is set to transform:translateX(100%) so that the entire image moves through all the way to the end.
+  */
+
+
+  .text {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 1400px;
+    height: 570px;
+    z-index:-3;
+    background-image: url(title2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+  
+    animation: panright2 80s linear infinite;
+  
+  }
+  
+  @keyframes panright2 {
+    0% {
+      transform: translateX(-17%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  /*
+  Similar to above. The z-index is set to -3 so that the text appears behind the cityscape, panels and the characters. At keyframe 0%, transform:translateX(17%)
+  is used to place the text closer to the middle. This text then has a fast animation:panright of 80 seconds. Given the size of the text, this animation
+  makes the text appear slower than the cityscape. This difference in speed and layering through the z-index creates a sense of space and distance through 
+  perspective, or angular velocity. 
+  */
+  
+
+  
+
+  html, body {
+    height:135%;
+  }
+
+  html {
+    background: linear-gradient(to bottom,#b5a956,#b4cc9e)
+  }
+
+  /* This code is used to set the a fade of colours from the top to bottom. A html, body height is set to 135% as this background colour was being cut off at
+  100%.
+  
