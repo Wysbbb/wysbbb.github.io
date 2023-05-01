@@ -14,7 +14,7 @@
 
 
 <!-- 
-  1. This button is given several css styling to improve user interactivity. A pointer cursor is applied to show that
+  1. This button is given several css styles to improve user interactivity. A pointer cursor is applied to show that
   the text can be interacted with. Likewise, the text colour changes and a soft highlight of the button shape appears to
   further encourage engagement with the button through the hover function. A solid blue is used for clear contrast and
   visibility. When the button is clicked, the active css is applied, making the text red and changing the background colour.
@@ -22,22 +22,23 @@
   
   2. The implementation of a load-throbber should provide users with an indication that their website loading is progressing.
   Here, the loading bar that appears off-center left and slowly progresses. The loading bar reaches to the other side of the 
-  page, and through the starting starting pointm uses symmetry to give the user the ability to gauge its progression. Once it
-  is complete, the load-throbber looks symmetrical on both sides of the page along the Y-axis and turns green. This animation 
+  page, and uses symmetry through the starting starting point to give the user the ability to gauge its progression. Once it
+  is complete, the load-throbber looks symmetrical on both sides of the page along the Y-axis and turns green. This is an indication
+  to the userr that the loading is done, however the fade to green is additionally indicative of its meaning. This animation 
   is done using the cyclecolour animation set to 10s, the time it takes for the page to load. The text "Loading . . ." is also
   implemented to further indicate to the user that the load-throbber is a loading bar. An ellipsis animation is used on the 
   ". . ." for even more suggestion that the website is currently loading. A transition of colour from grey to green is applied 
-  between two keyframes at the end (94% - 100%). Brighht green is commonly identified with correct or complete, and its use here 
-  is a clear indication that the loading has worked correctly and is finished. A grey text is chosen to be visible over the white 
-  background and the dark grey loading bar, as the bar passes it. Finally, the text changes to "Loading Complete" for even 
-  clearer indication to the user. It also transitions to black to be clearly visibile over the bright green background.
+  between two keyframes at the end (94% - 100%). Bright green is commonly identified with the notion of something that is 
+  correct or complete, and its use here is a clear indication that the loading has worked correctly and is finished. A grey text 
+  is chosen to be visible over the white background and the dark grey loading bar as the bar passes it. Finally, the text changes to
+  "Loading Complete" for even clearer indication to the user. It also transitions to black to be clearly visibile over the bright green background.
   
-  3. Each of these links are give a class from one to six. Through this they are given a transition on hover. A similar interaction
-  is seen throughout this website, this being transition to blue text and darker background with cursor change to pointer on mouse 
-  hover. This same styling is applied to the load-link button and dark mode button. By establishing these similarities, the user can
-  immediately interpret that each of these elements on the webpage can be interacted with using a click. The links here are also 
-  given an underline to suggest a slightly different function from the buttons. Just like the load-link, activating each <li> turns the 
-  text red and changes background colour to communicate the website is responding to the users action. The <li> and mode-button also
+  3. Each of these links are give a class from one to six. Through this they are given a transition on hover. A similar appearance and
+  interaction is seen throughout this website, that being the transition from black to blue text, darkening background, and with cursor 
+  change to pointer on mouse, all on mouse hover. This same styling is applied to the load-link button and dark mode button. By establishing 
+  these similarities, the user can immediately interpret that each of these elements on the webpage can be interacted with using a click. The links here are also 
+  given an underline to suggest a slightly different function from the buttons and highlight further website feedback. Just like the load-link, 
+  activating each <li> turns the text red and changes the background colour to communicate the website is responding to the users action. The <li> and mode-button also
   both have a slightly grey background colour of the same shade to increase visual harmony as elements to be interacted with on the 
   hosono page. It also allows both to be seen in dark mode. A black font is added to prevent a change to white on mode-button click.
   The white colour would otherwise be too hard to see against its light grey background.
@@ -45,7 +46,9 @@
   4. As mentioned above, this mode-button aims to uses the coherence of having the same visual cues and interactions as the other 
   styled buttons/links. The same transitions to text and background colour occur, providing clear feedback to the user's actions upon
   hovering, clicking and click-holding. This button text is also set to black to prevent it from being difficult to see when turning 
-  white against its background. 
+  white against its background. As mentioned above, it also has the same grey background as each <li> to suggest to the user that it 
+  is a website component that can be interacted with. The change over text and background colour upon hover and click both demonstrate
+  feedback and responsiveness to user input.
 
   5. A simple transition is added to the <body> using "transition: background-color 0.5s ease." Transition states how the CSS changes
   over time when a hover or active interaction occurs. This transition is then applied to the "background-color" property and is set 
