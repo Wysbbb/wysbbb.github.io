@@ -307,6 +307,12 @@ li ul{
   background-color: rgb(1, 224, 1);
   transform: scaleX(1)
   }
+
+
+  120% {
+    background-color: rgb(1, 224, 1);
+    transform: scaleX(1)
+  }
 }
 
 
@@ -357,6 +363,13 @@ li ul{
     content: " Completed";
     color: black;
   }
+
+  120% {
+    content: " Completed";
+    color: black;
+  }
+
+
 }
 
 .loadingtext{
