@@ -278,7 +278,7 @@ li ul{
   background-color: var(--col-03);
   /* we also initially set display to none so it only shows once the link is clicked */
   display: none;
-  animation: cycleColour 10s infinite;
+  animation: cycleColour 10.2s;
   transform: scaleX(0);
   transform-origin: left; 
   z-index: 1; 
