@@ -315,7 +315,7 @@ li ul{
 
 .loadingtext::after {
   content: "";
-  animation: ellipsis 10s;
+  animation: ellipsis 10.2s;
 }
 
 @keyframes ellipsis {
@@ -348,7 +348,7 @@ li ul{
     content: " .  .  .";
     color: rgb(194, 194, 194);
   }
-  94% {
+  93% {
     content: " .  .  .  .";
     color: rgb(194, 194, 194);
   }
@@ -366,7 +366,7 @@ li ul{
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
-  animation: changeColour 0.2s Linear 9.5s forwards;
+  animation: changeColour 0.2s Linear 9.6s forwards;
 }
 
 @keyframes changeColour {
