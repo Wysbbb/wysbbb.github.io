@@ -375,7 +375,7 @@ li ul{
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
-  animation: changeColour 0.2s Linear 9.6s forwards;
+  animation: changeColour 0.2s Linear 9.4s forwards;
 }
 
 @keyframes changeColour {
