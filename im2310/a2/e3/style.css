@@ -1,0 +1,423 @@
+/*
+  This one CSS file is imported into both index.html AND hosono.html so you need to be careful that it 
+  works for both.
+*/
+
+*{
+  box-sizing: border-box;
+  background-origin: border-box;
+  margin: 0;
+}
+
+:root{
+  /* first two colours come from Kuroi's Manga Pallete Palette */
+  /* https://lospec.com/palette-list/manga-pallete */
+  --col-01:#171219;
+  --col-02:#f2fbeb;
+  --col-03:#5252ff;
+  --col-04:#b6e878;
+  --col-05:rgb(213, 115, 115);
+  --col-06:#5f39e8;
+  --col-07:rgb(223, 221, 221);
+  --col-08:rgb(199, 199, 199);
+  --col-09: rgb(220, 203, 203);
+
+  
+  font-size: 16px;
+  /* scroll behaviour makes the <a> links to ids scroll to position over time rather than immediately */
+  scroll-behavior: smooth;
+}
+
+body{
+  padding: 1rem;
+  background-color: var(--col-02);
+  color: var(--col-01);
+  transition: background-color 0.5s ease;
+}
+
+
+
+.one {
+  background-color: var(--col-07);
+  color: black;
+
+}
+
+.one:hover{
+  transition: 0.27s;
+  color: var(--col-06);
+  cursor: pointer;
+  text-decoration: underline;
+  background-color:var(--col-08);
+}
+
+.one:active{
+  color: var(--col-05);
+  background-color: var(--col-09);
+}
+
+.two {
+  background-color: var(--col-07);
+  color:  black;
+}
+
+.two:hover{
+  transition: 0.27s;
+  color: var(--col-06);
+  cursor: pointer;
+  text-decoration: underline;
+  background-color:var(--col-08);
+}
+
+.two:active{
+  color: var(--col-05);
+  background-color: var(--col-09);
+}
+
+.three {
+  background-color: var(--col-07);
+  color:  black;
+}
+
+.three:hover{
+  transition: 0.27s;
+  color: var(--col-06);
+  cursor: pointer;
+  text-decoration: underline;
+  background-color:var(--col-08);
+}
+
+.three:active{
+  color: var(--col-05);
+  background-color: var(--col-09);
+}
+
+.four {
+  background-color: var(--col-07);
+  color: black;
+}
+
+.four:hover{
+  transition: 0.27s;
+  color: var(--col-06);
+  cursor: pointer;
+  text-decoration: underline;
+  background-color:var(--col-08);
+}
+
+.four:active{
+  color: var(--col-05);
+  background-color: var(--col-09);
+}
+
+.five {
+  background-color: var(--col-07);
+  color:  black;
+}
+
+.five:hover{
+  transition: 0.27s;
+  color: var(--col-06);
+  cursor: pointer;
+  text-decoration: underline;
+  background-color:var(--col-08);
+}
+
+.five:active{
+  color: var(--col-05);
+  background-color: var(--col-09);
+}
+
+.six {
+  background-color: var(--col-07);
+  color: black;
+}
+
+.six:hover{
+  transition: 0.27s;
+  color: var(--col-06);
+  cursor: pointer;
+  text-decoration: underline;
+  background-color:var(--col-08);
+}
+
+.six:active{
+  color: var(--col-05);
+  background-color: var(--col-09);
+}
+
+
+nav {
+  margin-top: 1rem;
+}
+
+nav li{
+  font-size: 1rem;
+}
+
+section{
+  margin-bottom: 2rem;
+}
+
+h1{
+  font-size: 3rem;
+}
+
+h2{
+  font-size: 2rem;
+}
+
+p{
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+figcaption{
+  width: fit-content;
+}
+
+dl ul{
+  margin-bottom: 0;
+}
+
+li{
+  font-size: 1rem;
+}
+
+dd{
+  padding-left: 60px;
+}
+
+li ul{
+  padding-left: 40px;
+}
+
+.img-wrapper{
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.img-figure{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.article-img{
+  width: 80%;
+}
+
+.res-columns{
+  column-width: 25rem;
+}
+
+
+#mode-button{
+  float: right;
+  /* note the use of position: sticky to keep the button on the page even with scrolling */
+  position: sticky;
+  top: 1rem;
+  background-color: rgb(223, 221, 221);
+  cursor: pointer;
+  color: black;
+}
+
+#mode-button:hover{
+  transition: 0.27s;
+  background-color: rgb(199, 199, 199);
+  color: rgb(29, 29, 253);
+}
+
+#mode-button:active{
+  background-color: rgb(220, 203, 203);
+  color: rgb(213, 115, 115)
+  
+}
+
+
+
+
+/* code for loading page */
+
+#load-body{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+/* changing button to look like a link */
+#load-link{
+  line-height: 1rem;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+#load-link:hover{
+  transition: 0.27s;
+  background-color: rgb(223, 221, 221);
+  color: rgb(84, 84, 250);
+}
+
+#load-link:active{
+  background-color: rgb(220, 203, 203);
+  color: rgb(213, 115, 115)
+
+}
+
+
+/* throbber while page is fake loading */
+#load-throbber{
+  /* the width, height and background-color give it a shape on the page without any content inside - 
+  these value are arbitrary, please change to create your own design  */
+  position: relative;
+  width: 25%;
+  height: 2rem;
+  background-color: var(--col-03);
+  /* we also initially set display to none so it only shows once the link is clicked */
+  display: none;
+  animation: cycleColour 10s infinite;
+  transform: scaleX(0);
+  transform-origin: left; 
+  z-index: 1; 
+}
+
+
+#loading-container {
+  display: none;
+}
+
+
+@keyframes cycleColour {
+  0% {
+    background-color: rgb(110, 110, 115);
+  }
+  30% {
+    background-color: rgb(110, 110, 115);
+   
+    
+  }
+  94% {
+    background-color: rgb(110, 110, 115);
+    }
+
+  100% {
+  background-color: rgb(1, 224, 1);
+  transform: scaleX(1)
+  }
+}
+
+
+
+
+
+.loadingtext::after {
+  content: "";
+  animation: ellipsis 10s;
+}
+
+@keyframes ellipsis {
+  12.5% {
+    content: " .";
+    color: rgb(194, 194, 194);
+  }
+  25% {
+    content: " .  .";
+    color: rgb(194, 194, 194);
+  }
+  37.5% {
+    content: " .  .  .";
+    color: rgb(194, 194, 194);
+  }
+
+  50% {
+    content: " .  .  .  .";
+    color: rgb(194, 194, 194);
+  }
+  62.5% {
+    content: " .";
+    color: rgb(194, 194, 194);
+  }
+  75% {
+    content: " .  .";
+    color: rgb(194, 194, 194);
+  }
+  87.5% {
+    content: " .  .  .";
+    color: rgb(194, 194, 194);
+  }
+  94% {
+    content: " .  .  .  .";
+    color: rgb(194, 194, 194);
+  }
+
+  100% {
+    content: " Completed";
+    color: black;
+  }
+}
+
+.loadingtext{
+  position: absolute;
+  color: rgb(194, 194, 194);
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  animation: changeColour 0.2s Linear 9.5s forwards;
+}
+
+@keyframes changeColour {
+  from {
+    color: rgb(194, 194, 194);
+  }
+  to {
+    color: black;
+  }
+}
+
+
+
+
+
+
+
+
+/* Media Queries */
+
+/* medium devices 600 - 992 */
+@media only screen and (min-width: 600px) {
+  :root{
+    font-size: 20px;
+  }
+  
+  .img-wrapper{
+    width: 75%;
+    margin: 1.5rem auto;
+  }
+
+}
+
+/* medium devices 992 + */
+@media only screen and (min-width: 992px) {
+  :root{
+    font-size: 24px;
+  }
+
+  .img-wrapper{
+    max-width: fit-content;
+    float: right;
+    margin: 1.5rem;
+  }
+
+}
+
+@media (prefers-reduced-motion) {
+  :root{
+    scroll-behavior: auto;
+  }
+}
+
+
