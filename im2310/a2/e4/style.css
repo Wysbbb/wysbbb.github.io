@@ -1,0 +1,222 @@
+*{
+  box-sizing: border-box;
+  background-origin: border-box;
+  margin: 0;
+}
+
+/* Basis for colour palette comes from 1bit Monitor Glow Palette by Polyducks */
+/* https://lospec.com/palette-list/1bit-monitor-glow */
+/* you're welcome to change the colours if you want or any of the other general page style */
+:root{
+  --col-01:#222323;
+  --col-02:#f0f6f0;
+  --col-03:#5252ff;
+  --col-04:#b6e878;
+  --col-05:#bcbdbc;
+  --col-06:#6f6f6f;
+  --border: 1px solid var(--col-02);
+}
+
+
+
+/* Styling 
+
+Define the styling: 
+The styling for this website emphasises the specific aesthetic that the video within the video player shows. The content of the media player is a display of abstract, 
+vibrant colours and futuristic and digital audio. This style greatly reminds me of the Y2K aesthetic; a nostalgic design style draws inspiration from the 1990s to the 
+early 2000s. Characterised by bold patterns, bright colours and technology-inspired designs, I decided to create the style for my website using this approach. 
+Common features of the Y2K aesthetic include: 
+- bright neon colours combined with whites or blacks 
+- futuristic motifs (glitch effects as seen in the video) 
+- boxy/oversized silhouettes.
+ These style choices were used to create and edit the background image for the website on photoshop (use of blacks and white, neon pink colours). The text uses a 
+ futuristic font, and the bacground rectangles, font and border box of the media player all have a bold and white width to them. Despite this, the background elements 
+ are designed in a way that do not decrease visibility of the media player. Instead, they are slightly faded out and desaturated to keep the media player as the focus, 
+ and so it is also centered using css and increased in size for this purpose. The sharp and boxy features of the media player buttons compliment this Y2K aesthetic, and 
+ so did not require any more styling to fit the rest of the design. The background adapts to different screen sizes with inherit. This creates a repeating image of the 
+ background, which also compliments the Y2K pattern aesthetic.
+
+How is  the layout responsive:
+Responsive design is an approach to web design that adapts the website to different sceen sizes and devices. The width element of the video is set to 100%, which helps 
+automatically adjusts the size of its container. The css code also uses grid properties for both the overlay and video element. This creates a flexible layout that 
+adjusts to different screen sizes. Flexbox properties are also applied to the buttons, allowing for a responsive design that also adjusts to screen size. The overall 
+combination of these flexible layout techniques use percantage-based sizing for elements to create responsive adaption to different screen sizes. The background image 
+is set to cover and inherit, allowing it to resize whilst maintaining aspect ratio and repeating to prevent stretching and distorting. These properties further increase
+layout responsiveness by preserving the visual appeal and quality whilst adapting to different screen size and device orientations.
+
+How does it have visual heirarchy:
+Visual heirarchy is established using colour, size and the placement of different elements within the page. The media player is the main focus, scaled up and higher in
+opacity and saturation than the background. The buttons are also visually prominent. They are positioned below the media player to indicate their secondary importance. 
+The white border draws focus to the all these elements in the video-player-wrapper. The text on the background design is located at the edges of the website, and the white
+rectangles are masked  with a light filter and lowered in opacity so as not to draw attention. Placement of the fullscreen button on the right of the progression bar
+and the other buttons on the left also follows the common design pattern to place frequently used features on the left, allowing users to quickly identify and access 
+primary interaction controls. 
+
+How does it have context appropriate usability:
+The video player implements a play/pause button, mute/unmute button, progress bar and full screen button. Each of these are appropriate control for the context of a
+ website with a video player as the main focus. The icon pause button is added using javascript. This function operates by setting the image to "none" when the 
+ videoElement is being played, and "block" when paused. It allows the icon to appear when the video is paused and disappear when it is playing. This also allows the 
+ function to click the screen to play the video by attachng two seperate event listeners. Attaching one to the "playButton" element and one to the "videoElement," the 
+ user can click either one to pause or play. The cursor also changes to pointer mode when hovering over the media player using "cursor:pointer" css for the 
+ video-player-wrapper, indicating that the screen can be clicked to initiate play and not just the button. The implemented mute/unmute button checks whether the "muted" 
+ property of the videoElement is true or false. If true, the function unmutes and sets "videoElement.muted=false," and changinging the background image of the "muteButton"
+ to a mute icon. If "muted" is false, then the javascript sets "videoElement.muted=true" to unmute the video and changes the "muteButton" background image to unmute.
+
+
+How did the chosen feature improve overall usability and be the most appropriate choice in relation to the context:
+The fullscreen button greatly improves overall usability for a website focused on a media player. Expanding the video by using the buttom takes up the whole screen and 
+allows for a more immersive viewing experience. It is especially important for a website with only a media player. As the user's focus is alreadyon the video and audio 
+content, this button lets them engage with it fully without other distractions. The other options of fastforward, rerwind and loop may be useful but are not essential for 
+the basic features of a video player. The buttons are not relevant for all types of content in the way that the fullscreen button is. It is a standard feature that users 
+come to expect from most video players and video streaming platforms. As such, the fullcreen button is the most appropriate choice that can enhance user experience and 
+improve overall usability.
+
+
+
+*/
+
+
+
+
+
+body {
+  background-image: url('wallpaper6.jpg');
+  background-size:cover;
+  background-repeat:inherit;
+
+}
+
+
+
+.video-player-wrapper {
+  box-sizing: border-box; 
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 6px solid white;
+  padding: 100px;
+  cursor: pointer;
+}
+
+/* becuase I want to overlay the play icon on the video they need to be in their own wrapper */
+.video-element-wrapper{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+#videoElement{
+  width: 100%;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+#videoPlayOverlay{
+  width: 8rem;
+  height: 8rem;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  justify-self: center;
+  align-self: center;
+  opacity: 0.6;
+  /* display: none; */
+}
+
+.video-controls-wrapper{
+  display: flex;
+  justify-content: center;
+}
+/* this overwrites the above display:flex - something which is then undone when the JS loads */
+#controlsWrapper{
+  display: none;
+}
+
+.video-control-button{
+  width: 2rem;
+  height: 2rem;
+  padding: .1rem;
+  border: none;
+  cursor: pointer;
+}
+.video-control-button:hover{
+  background-color: var(--col-05);
+}
+.video-control-button:active{
+  background-color: var(--col-06);
+}
+.button-icon{
+  pointer-events: none;
+}
+
+#playButton{
+  background-image: url('./icons/play.svg');
+}
+
+#muteButton{
+  background-image: url('./icons/mute.svg');
+}
+
+#fullScreenButton{
+  background-image: url('./icons/fullScreen.svg');
+}
+
+.video-progress-bar{
+  /* Reset the default appearance */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  height: 2rem;
+  flex-grow: 1;
+  cursor: pointer;
+  background-color: var(--col-01);
+  box-shadow: 0 1px 2px var(--col-02) inset;
+}
+::-moz-progress-bar {
+  background-color: var(--col-02);
+}
+
+::-webkit-progress-bar {
+  background-color: var(--col-01);
+  box-shadow: 0 1px 2px var(--col-02) inset;
+}
+::-webkit-progress-value {
+  background-color: var(--col-02);
+}
+
+.timeline-loading{
+  background-image: -moz-repeating-linear-gradient(45deg, var(--col-03) 0% 2%, transparent 2% 4%, red 4%);
+  background-size: 200% 100%;
+  animation: loadingAnimation 4s linear infinite;
+}
+
+@keyframes loadingAnimation {
+  100%{
+    background-position: 50% 0%;
+  }
+}
+
+
+.volume-wrapper {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  z-index: 10;
+}
+
+.volume-wrapper:hover {
+  opacity: 1;
+}
+
+
+
+
+
+
+
+
+
