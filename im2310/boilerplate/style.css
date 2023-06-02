@@ -1,9 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+  
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Michroma', sans-serif;
 }
 
 html, body {
@@ -35,6 +38,7 @@ header {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+
 }
 
 .logo {
@@ -94,9 +98,10 @@ header {
 
 #text {
    position: absolute;
-   font-size: 5em;
-   color: #1b283a;
-   text-shadow: 2px 4px 5px #fff; 
+   font-size: 4em;
+   color: hsl(0, 93%, 68%);
+   text-shadow: 5px 4px 5px #000000; 
+
 }
 
 .parallax img {
@@ -107,13 +112,18 @@ header {
     pointer-events: none;
 }
 
-.parallax img#cloud-left {
-    transform: translateX(-282px);
+.parallax img#gate-left {
+    transform: translateX(-405px);
     position: fixed;
 }
 
-.parallax img#cloud-right {
-    transform: translateX(305px);
+.parallax img#gate-right {
+    transform: translateX(447px);
+    position: fixed;
+}
+
+.parallax img#border {
+    transform: translateY(-275px);
     position: fixed;
 }
 
@@ -121,12 +131,13 @@ header {
     position: relative;
     background-color: black;
     padding: 30px 100px;
-    margin-bottom: 10px;
+    margin-bottom: 420vh;
+    flex-grow: 1;
 }
 
 .content h2 {
     font-size: 3em;
-    color: rgb(215, 41, 41);
+    color: hsl(0, 93%, 68%);
 }
 
 .content p {
@@ -142,11 +153,55 @@ section {
     will-change: transform;
 }
 
-img {
-    width: 100%;
-}
+
 
 div {
     margin-bottom: 80px;
 }
+
+
+
+
+.background_img {
+    top: 0; 
+    background-size: cover;
+    background: no-repeat;
+    position: fixed;
+    z-index: -1;
+}
+
+.background_img img {
+    width:100vw;
+}
+
+
+
+.scroll_text {
+    position: absolute;
+    top: 560vh;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100vh;
+    z-index: 1;
+    background-color: transparent;
+    padding-bottom: 100vh;
+  
+  }
+
+  .scroll_text p {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 100vh;
+    max-width: 500px;
+    background-color: #33333377;
+  }
+
+ 
+
+.distort img {
+  width: 100%;
+}
+
+
 
