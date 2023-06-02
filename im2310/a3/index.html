@@ -1,20 +1,183 @@
+<!-- 
+Adjective: Interwoven
+Design Principle: Information Design
+
+Clear Navigation
+The prototype website begins with a header with a navigation menu, providing a clear and organised page structure. Each menu item is labelled with concise names that are 
+bold and contrasted against the dark background, making it easy for users to spot and understand their purpose.
+
+Button Hover Animations
+Hovering over the navigations links plays a hover animation effect. This interactive element provides visual feedback to indicate that the links are clickable and the 
+user’s inputs are being registered to enhance user experience.
+
+Parallax Scrolling
+The implementation of the parallax effect to the beginning section adds a sense of depth and interactivity to the page. The imagery of the neon lights and elements move 
+with the website title as the user scrolls down. As the user scrolls down past this section the gates close in front of the background image and the lights on the left 
+and right go away, whilst the title disappears below and the area appears to ‘close.’ It indicates the beginning of the next section of the page for the user as they 
+are then met with the main content of the page. Scrolling back up them reverses all these movements to ‘open’ the section back up. The elements demonstrate an interwoven 
+aspect as they all come back out from different layers and positions. By visually showing this beginning section interweaving amongst itself to ‘close’ as the user moves 
+on to the paragraphs of text below, the parallax effect draws attention to the next section of the website – the information. Likewise, when scrolling up and leaving the 
+information section, the gates open back up whilst the title and neon lights come back to draw back attention.
+
+Responsive Design
+The viewport meta tag ensures the website can adapt to different screen sizes. Although this hasn't been implemented to the parallax elements at the 
+beginning of the page, the information content and navigation buttons can still be accessed on various decides and screen sizes. Given it is a prototype website focusing 
+on information design, this is given priority over the visual stylisation at the beginning. Similarly, the navigation buttons have been set up but do not yet link to other 
+pages yet. In a finalised design these factors would be polished. 
+
+Text Blocks
+The paragraphs are structured in a clear and concise manner, with each section consisting of a title, paragraph and image. Below this section the solid background scrolls 
+away to reveal a background image. Fixed in its position, the scroll_text is set to come up after the user is given a fullscreen look at the image through adjusting vh css 
+padding. Information content pertains not only to text, but images, graphs, video, etc. as well. The scroll_text is designed to not cover the background so as not to 
+detract from it, whilst also interweaving information in for the reader as well. This allows the user to read through multiple blocks of text and view the entire unmoving 
+image at the same time. The solid background then covers the image again, and further enforces the idea of interwoven informational elements within the page.  
+
+Stylisation
+The distort effect applied within the body provides the website with some stylisation. Wong Kar Wai’s cinematography was used as influence for the visuals of the page and 
+can be seen from the neon signs to the colour palette of dramatic colours contrasted on black - mirroring shadows and night. This emphasised a ‘neon Hong Kong at night’ 
+aesthetic.
+-->
+
+
+
 <!DOCTYPE html>
 
 <html lang="en">
 
     <head>
 
-        <meta charset="utf-8" name="viewport" content="width=devide-width", initial-scale="1.0">
+        <meta charset="utf-8" name="viewport" content="width=device-width", initial-scale="1.0">
 
         <link rel="stylesheet" href="style.css">
 
-        <script src="script.js"></script>
 
     </head>
 
     <body>
-        <h1> wee woo </h1>
+      <header>
+        <h2 class="logo">My Logo</h2>
+        <nav class="navigation">
+            <a href="#">Home<span></span></a>
+            <a href="#">About<span></span></a>
+            <a href="#">Service<span></span></a>
+            <a href="#">Contact<span></span></a>
+        </nav>
+      </header>
 
+      <section class="parallax">
+        <h2 id="text">Assignment 3</h2>
+        <img src="light-left.png" id="light-left" > 
+        <img src="light-right.png" id="light-right">
+        <img src="gate-left.png" id="gate-left">
+        <img src="gate-right.png" id="gate-right">
+        <img src="border.png" id="border">
+      </section> 
+    
+
+
+<div class="content">
+
+      <section class="distort">
+      <div>
+        <h2> Parallax Scrolling </h2>
+      
+    
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi consequatur pariatur dolorem accusantium porro nulla dolorum! Officia, laborum. Ab tenetur, fuga fugiat aut quas voluptate mollitia quae omnis deserunt recusandae illum ut, architecto assumenda nostrum reprehenderit! Incidunt illo voluptatibus eos dolorem quam aliquam tenetur rerum temporibus, animi perspiciatis voluptas repellat vero dolore ut sapiente iure corrupti cum tempore, adipisci ipsa hic quo nobis? Modi libero doloribus qui voluptatibus, dolores possimus consectetur nihil sit, tenetur, fugiat culpa rerum inventore cumque debitis quam impedit facere minima ex eaque accusantium quasi! Voluptates, veritatis? Nisi cum minima voluptatum aut at expedita nesciunt, nam eaque inventore quisquam eum sunt eveniet quo laudantium recusandae voluptatem magnam beatae eligendi ratione? Blanditiis error nulla eos ab totam provident? <br><br> 
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi consequatur pariatur dolorem accusantium porro nulla dolorum! Officia, laborum. Ab tenetur, fuga fugiat aut quas voluptate mollitia quae omnis deserunt recusandae illum ut, architecto assumenda nostrum reprehenderit! Incidunt illo voluptatibus eos dolorem quam aliquam tenetur rerum temporibus, animi perspiciatis voluptas repellat vero dolore ut sapiente iure corrupti cum tempore, adipisci ipsa hic quo nobis? Modi libero doloribus qui voluptatibus, dolores possimus consectetur nihil sit, tenetur, fugiat culpa rerum inventore cumque debitis quam impedit facere minima ex eaque accusantium quasi! Voluptates, veritatis? Nisi cum minima voluptatum aut at expedita nesciunt, nam eaque inventore quisquam eum sunt eveniet quo laudantium recusandae voluptatem magnam beatae eligendi ratione? Blanditiis error nulla eos ab totam provident? <br><br> 
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi consequatur pariatur dolorem accusantium porro nulla dolorum! Officia, laborum. Ab tenetur, fuga fugiat aut quas voluptate mollitia quae omnis deserunt recusandae illum ut, architecto assumenda nostrum reprehenderit! Incidunt illo voluptatibus eos dolorem quam aliquam tenetur rerum temporibus, animi perspiciatis voluptas repellat vero dolore ut sapiente iure corrupti cum tempore, adipisci ipsa hic quo nobis? Modi libero doloribus qui voluptatibus, dolores possimus consectetur nihil sit, tenetur, fugiat culpa rerum inventore cumque debitis quam impedit facere minima ex eaque accusantium quasi! Voluptates, veritatis? Nisi cum minima voluptatum aut at expedita nesciunt, nam eaque inventore quisquam eum sunt eveniet quo laudantium recusandae voluptatem magnam beatae eligendi ratione? Blanditiis error nulla eos ab totam provident? <br><br> 
+     
+      </p>
+
+      <img src="cd.jpg" alt="" />
+
+    </div> 
+
+    <div>
+      <h2> Distort </h2>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi consequatur pariatur dolorem accusantium porro nulla dolorum! Officia, laborum. Ab tenetur, fuga fugiat aut quas voluptate mollitia quae omnis deserunt recusandae illum ut, architecto assumenda nostrum reprehenderit! Incidunt illo voluptatibus eos dolorem quam aliquam tenetur rerum temporibus, animi perspiciatis voluptas repellat vero dolore ut sapiente iure corrupti cum tempore, adipisci ipsa hic quo nobis? Modi libero doloribus qui voluptatibus, dolores possimus consectetur nihil sit, tenetur, fugiat culpa rerum inventore cumque debitis quam impedit facere minima ex eaque accusantium quasi! Voluptates, veritatis? Nisi cum minima voluptatum aut at expedita nesciunt, nam eaque inventore quisquam eum sunt eveniet quo laudantium recusandae voluptatem magnam beatae eligendi ratione? Blanditiis error nulla eos ab totam provident? <br><br> 
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi consequatur pariatur dolorem accusantium porro nulla dolorum! Officia, laborum. Ab tenetur, fuga fugiat aut quas voluptate mollitia quae omnis deserunt recusandae illum ut, architecto assumenda nostrum reprehenderit! Incidunt illo voluptatibus eos dolorem quam aliquam tenetur rerum temporibus, animi perspiciatis voluptas repellat vero dolore ut sapiente iure corrupti cum tempore, adipisci ipsa hic quo nobis? Modi libero doloribus qui voluptatibus, dolores possimus consectetur nihil sit, tenetur, fugiat culpa rerum inventore cumque debitis quam impedit facere minima ex eaque accusantium quasi! Voluptates, veritatis? Nisi cum minima voluptatum aut at expedita nesciunt, nam eaque inventore quisquam eum sunt eveniet quo laudantium recusandae voluptatem magnam beatae eligendi ratione? Blanditiis error nulla eos ab totam provident? <br><br> 
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi consequatur pariatur dolorem accusantium porro nulla dolorum! Officia, laborum. Ab tenetur, fuga fugiat aut quas voluptate mollitia quae omnis deserunt recusandae illum ut, architecto assumenda nostrum reprehenderit! Incidunt illo voluptatibus eos dolorem quam aliquam tenetur rerum temporibus, animi perspiciatis voluptas repellat vero dolore ut sapiente iure corrupti cum tempore, adipisci ipsa hic quo nobis? Modi libero doloribus qui voluptatibus, dolores possimus consectetur nihil sit, tenetur, fugiat culpa rerum inventore cumque debitis quam impedit facere minima ex eaque accusantium quasi! Voluptates, veritatis? Nisi cum minima voluptatum aut at expedita nesciunt, nam eaque inventore quisquam eum sunt eveniet quo laudantium recusandae voluptatem magnam beatae eligendi ratione? Blanditiis error nulla eos ab totam provident? <br><br> 
+     
+      </p>
+
+      <img src="street.jpg_large" alt="" />
+
+    </div> 
+
+
+
+
+
+      <div class="scroll_text">
+        <p> 
+          Lorem ipsum dolor sit amet consectetur, adipisicing 
+         </p>
+     
+
+        <p> 
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro vero dolores ipsa, consequuntur, non aspernatur odio dolorem quisquam ut, illo quaerat minima exercitationem. Voluptatum quidem quo excepturi, beatae laborum possimus.
+        </p>
+
+
+        <p> 
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro vero dolores ipsa, consequuntur, non aspernatur odio dolorem quisquam ut, illo quaerat minima exercitationem. Voluptatum quidem quo excepturi, beatae laborum possimus.
+        </p>
+      </div>
+      </section>
+</div>
+
+
+
+      <div class="background_img">
+        <img src="back.jpg" alt="Background Image"/>
+      </div>
+
+
+
+
+<div class="content">
+  <section class="distort">
+    <div>
+        <h2> Parallax Scrolling </h2>
+      
+    
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi consequatur pariatur dolorem accusantium porro nulla dolorum! Officia, laborum. Ab tenetur, fuga fugiat aut quas voluptate mollitia quae omnis deserunt recusandae illum ut, architecto assumenda nostrum reprehenderit! Incidunt illo voluptatibus eos dolorem quam aliquam tenetur rerum temporibus, animi perspiciatis voluptas repellat vero dolore ut sapiente iure corrupti cum tempore, adipisci ipsa hic quo nobis? Modi libero doloribus qui voluptatibus, dolores possimus consectetur nihil sit, tenetur, fugiat culpa rerum inventore cumque debitis quam impedit facere minima ex eaque accusantium quasi! Voluptates, veritatis? Nisi cum minima voluptatum aut at expedita nesciunt, nam eaque inventore quisquam eum sunt eveniet quo laudantium recusandae voluptatem magnam beatae eligendi ratione? Blanditiis error nulla eos ab totam provident? <br><br> 
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi consequatur pariatur dolorem accusantium porro nulla dolorum! Officia, laborum. Ab tenetur, fuga fugiat aut quas voluptate mollitia quae omnis deserunt recusandae illum ut, architecto assumenda nostrum reprehenderit! Incidunt illo voluptatibus eos dolorem quam aliquam tenetur rerum temporibus, animi perspiciatis voluptas repellat vero dolore ut sapiente iure corrupti cum tempore, adipisci ipsa hic quo nobis? Modi libero doloribus qui voluptatibus, dolores possimus consectetur nihil sit, tenetur, fugiat culpa rerum inventore cumque debitis quam impedit facere minima ex eaque accusantium quasi! Voluptates, veritatis? Nisi cum minima voluptatum aut at expedita nesciunt, nam eaque inventore quisquam eum sunt eveniet quo laudantium recusandae voluptatem magnam beatae eligendi ratione? Blanditiis error nulla eos ab totam provident? <br><br> 
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi consequatur pariatur dolorem accusantium porro nulla dolorum! Officia, laborum. Ab tenetur, fuga fugiat aut quas voluptate mollitia quae omnis deserunt recusandae illum ut, architecto assumenda nostrum reprehenderit! Incidunt illo voluptatibus eos dolorem quam aliquam tenetur rerum temporibus, animi perspiciatis voluptas repellat vero dolore ut sapiente iure corrupti cum tempore, adipisci ipsa hic quo nobis? Modi libero doloribus qui voluptatibus, dolores possimus consectetur nihil sit, tenetur, fugiat culpa rerum inventore cumque debitis quam impedit facere minima ex eaque accusantium quasi! Voluptates, veritatis? Nisi cum minima voluptatum aut at expedita nesciunt, nam eaque inventore quisquam eum sunt eveniet quo laudantium recusandae voluptatem magnam beatae eligendi ratione? Blanditiis error nulla eos ab totam provident? <br><br> 
+     
+      </p>
+
+      <img src="download.jpg"/>
+
+    </div> 
+
+    <div>
+      <h2> Distort </h2>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi consequatur pariatur dolorem accusantium porro nulla dolorum! Officia, laborum. Ab tenetur, fuga fugiat aut quas voluptate mollitia quae omnis deserunt recusandae illum ut, architecto assumenda nostrum reprehenderit! Incidunt illo voluptatibus eos dolorem quam aliquam tenetur rerum temporibus, animi perspiciatis voluptas repellat vero dolore ut sapiente iure corrupti cum tempore, adipisci ipsa hic quo nobis? Modi libero doloribus qui voluptatibus, dolores possimus consectetur nihil sit, tenetur, fugiat culpa rerum inventore cumque debitis quam impedit facere minima ex eaque accusantium quasi! Voluptates, veritatis? Nisi cum minima voluptatum aut at expedita nesciunt, nam eaque inventore quisquam eum sunt eveniet quo laudantium recusandae voluptatem magnam beatae eligendi ratione? Blanditiis error nulla eos ab totam provident? <br><br> 
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi consequatur pariatur dolorem accusantium porro nulla dolorum! Officia, laborum. Ab tenetur, fuga fugiat aut quas voluptate mollitia quae omnis deserunt recusandae illum ut, architecto assumenda nostrum reprehenderit! Incidunt illo voluptatibus eos dolorem quam aliquam tenetur rerum temporibus, animi perspiciatis voluptas repellat vero dolore ut sapiente iure corrupti cum tempore, adipisci ipsa hic quo nobis? Modi libero doloribus qui voluptatibus, dolores possimus consectetur nihil sit, tenetur, fugiat culpa rerum inventore cumque debitis quam impedit facere minima ex eaque accusantium quasi! Voluptates, veritatis? Nisi cum minima voluptatum aut at expedita nesciunt, nam eaque inventore quisquam eum sunt eveniet quo laudantium recusandae voluptatem magnam beatae eligendi ratione? Blanditiis error nulla eos ab totam provident? <br><br> 
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi consequatur pariatur dolorem accusantium porro nulla dolorum! Officia, laborum. Ab tenetur, fuga fugiat aut quas voluptate mollitia quae omnis deserunt recusandae illum ut, architecto assumenda nostrum reprehenderit! Incidunt illo voluptatibus eos dolorem quam aliquam tenetur rerum temporibus, animi perspiciatis voluptas repellat vero dolore ut sapiente iure corrupti cum tempore, adipisci ipsa hic quo nobis? Modi libero doloribus qui voluptatibus, dolores possimus consectetur nihil sit, tenetur, fugiat culpa rerum inventore cumque debitis quam impedit facere minima ex eaque accusantium quasi! Voluptates, veritatis? Nisi cum minima voluptatum aut at expedita nesciunt, nam eaque inventore quisquam eum sunt eveniet quo laudantium recusandae voluptatem magnam beatae eligendi ratione? Blanditiis error nulla eos ab totam provident? <br><br> 
+     
+      </p>
+
+      <img src="beach.jpg"/>
+
+    </div> 
+
+
+  </section>
+ </div>
+
+
+    
+
+
+      <script src="script.js"></script>
+
+      
     </body>
 
 </html>
